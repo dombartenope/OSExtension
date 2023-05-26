@@ -9,13 +9,13 @@
     margin-right: 10px;
     width: 100px;
   }
-  
+
   /* Input and button wrapper styles */
   .input-wrapper {
     display: flex;
     margin-top: 10px;
   }
-  
+
   /* Input styles */
   .input-wrapper input {
     flex-grow: 1;
@@ -27,7 +27,7 @@
     font-size: 16px;
     margin-right: 10px;
   }
-  
+
   /* Button styles */
   .input-wrapper button {
     border-radius: 5px;
@@ -39,7 +39,7 @@
     margin-top:5px;
     cursor: pointer;
   }
-  
+
   /* Instructions styles */
   .instructions {
     margin-top: 20px;
