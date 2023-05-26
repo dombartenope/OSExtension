@@ -9,6 +9,11 @@ const emailURL = "https://dashboard.onesignal.com/super-user?email="
 const uuidURL = "https://dashboard.onesignal.com/apps/"
 const orgURL = "https://dashboard.onesignal.com/organizations/"
 
+form.addEventListener("change", e => {
+    console.log(e.currentTarget.value)
+
+});
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const uuid_ok = uuid_re.exec(input.value);
