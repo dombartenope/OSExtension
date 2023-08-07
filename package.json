@@ -1,0 +1,15 @@
+{
+  "name": "onesignal-superuser-chromeextension",
+  "version": "1.0.0",
+  "description": "Quickly link to onesignal superuser pages for a given UUID or email",
+  "main": "background.js",
+  "repository": "git@github.com:collingreen/onesignal-superuser-chromeextension",
+  "author": "Dom",
+  "license": "unlicensed",
+  "dependencies": {
+    "prettier": "^2.8.8"
+  },
+  "scripts": {
+    "format": "yarn run prettier -w src/*.js"
+  }
+}
