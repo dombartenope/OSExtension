@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Quickly link to onesignal superuser pages for a given UUID or email",
   "main": "background.js",
-  "repository": "git@github.com:collingreen/onesignal-superuser-chromeextension",
+  "repository": "git@github.com:dombartenope/OSExtension",
   "author": "Dom",
   "license": "unlicensed",
   "dependencies": {
