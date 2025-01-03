@@ -17,14 +17,10 @@
 - Emails are more lenient in requiring only an '@' with some domain string following (w or w/o the "dot extension")
 > Examples:  
 ```
-✅ XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Using the Pinned Extension : 
 ```
-![ReadMeImg/plus.png](ReadMeImg/uuid.png)
+![ReadMeImg/plugin.png](ReadMeImg/plugin.png)
 ```
-✅ email@example.com
+Searching Highlighted Text :
 ```
-![ReadMeImg/email.png](ReadMeImg/email.png)
-```
-Using the pinned extension:
-```
-![ReadMeImg/extension.png](ReadMeImg/extension.png)
+![ReadMeImg/right_click.png](ReadMeImg/right_click.png)
