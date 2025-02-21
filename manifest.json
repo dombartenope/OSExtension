@@ -1,11 +1,11 @@
 {
   "name": "OneSignal SuperUser Quick Link",
   "description": "Quickly link to onesignal superuser pages for a given UUID or email",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 3,
   "action": {
     "default_popup": "src/onesignalsuperuser.html",
-    "default_icon": "src/assets/onesignalsuperuser.png"
+    "default_icon": "src/assets/onesignal.png"
   },
   "background": {
     "service_worker": "src/background.js"
@@ -14,6 +14,6 @@
     "contextMenus"
   ],
   "icons": {
-    "16": "src/assets/onesignalsuperuser.png"
+    "16": "src/assets/onesignal.png"
   }
 }

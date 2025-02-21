@@ -9,6 +9,7 @@
 - Clicking the extension will allow you to enter in any OneSignal associated UUID or email, and search it using the super user search function on the OneSignal Dashboard (must be logged in as super user).
 **Better yet **
 - When on chrome, you can highlight any text containing an email or uuid and search for that string.
+- You can now Search Recurly and SFDC from the right click menu.
 
  ### How it works:
 - When highlighting or adding a string into the extension form, it will check the string matches UUID/Email formats via regex.
@@ -23,4 +24,4 @@ Using the Pinned Extension :
 ```
 Searching Highlighted Text :
 ```
-![ReadMeImg/right_click.png](ReadMeImg/right_click.png)
+![ReadMeImg/right_click2.png](ReadMeImg/right_click2.jpg)
