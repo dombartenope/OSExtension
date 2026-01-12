@@ -17,6 +17,12 @@ const MENU = {
     id: 'sfdc-search',
     title: '⚡️ Search SFDC For "%s"',
     baseUrl: "https://onesignal.lightning.force.com/one/one.app#"
+  },
+  ORG_AUDIT_LOG: {
+    id: 'org-audit-log',
+    title: '📝 Audit log for Org',
+    urlTemplate: "https://dashboard.onesignal.com/organizations/%s/audit-logs",
+    uuidOnly: true
   }
 };
 
@@ -78,19 +84,28 @@ function handleMenuClick(info) {
   console.log(`Menu clicked: ${menuItemId}, Selection: "${selectionText}"`);
 
   for (const key in MENU) {
-    const { id, baseUrls, baseUrl } = MENU[key];
+    const { id, baseUrls, baseUrl, urlTemplate, uuidOnly } = MENU[key];
     if (menuItemId === id) {
-      const searchUrl = menuItemId === MENU.SFDC.id
-        ? generateSFDCUrl(selectionText)
-        : baseUrls
-          ? isUUID
-            ? `${baseUrls.uuid}${selectionText}`
-            : isEmail
-              ? `${baseUrls.email}${selectionText}`
-              : null
-          : baseUrl
-            ? `${baseUrl}${selectionText}`
+      let searchUrl = null;
+
+      if (uuidOnly && !isUUID) {
+        console.warn(`Validation Error: "${selectionText}" is not a valid UUID.`);
+        break;
+      }
+
+      if (urlTemplate) {
+        searchUrl = urlTemplate.replace('%s', selectionText);
+      } else if (menuItemId === MENU.SFDC.id) {
+        searchUrl = generateSFDCUrl(selectionText);
+      } else if (baseUrls) {
+        searchUrl = isUUID
+          ? `${baseUrls.uuid}${selectionText}`
+          : isEmail
+            ? `${baseUrls.email}${selectionText}`
             : null;
+      } else if (baseUrl) {
+        searchUrl = `${baseUrl}${selectionText}`;
+      }
 
       if (searchUrl) {
         console.log(`Opening URL: ${searchUrl}`);
